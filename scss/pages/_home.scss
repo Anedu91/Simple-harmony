@@ -1,0 +1,292 @@
+.home{
+  position: relative;  
+  overflow-x: hidden;
+  /*HEADER CIRCLE*/
+  &:before{
+    content: '';
+    position: absolute;
+    background: transparent linear-gradient(179deg, #63bb6200 0%, #63BB6226 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.41;
+    border-radius: 50%;    
+    z-index: -1;
+    width: calc(60vw);
+    height:calc(60vw);
+    right: -10vw;
+    display: none;
+    @include respond-above(lg){
+      display: block;
+      top: -5vw;
+    }
+    @include respond-above(xl){
+      top: -10vw;
+    }
+    @include respond-above(xxl){
+      top: -17vw;
+    }
+
+  }
+  /*FOOTER BAMBOO*/
+  // &:after{
+  //   position: absolute;
+  //   bottom: -700px;
+  //   left: -400px;
+  //   content: '';
+  //   width: 1918.46px;
+  //   height: 2417.72px;
+  //   background-image: url(../images/bamboo.svg);
+  //   background-repeat: no-repeat;
+  //   display: none;
+  //   transform: rotate(10deg);
+  //   @include respond-above(lg){
+  //     display: block;
+  //   }
+  // }
+  /*HEADER BAMBOO*/
+  &__bamboo{
+    position: absolute;
+    top: 350px;
+    left: -350px;
+    content: '';
+    width: 831.76px;
+    height: 1048.22px;
+    background-image: url(../images/bamboo.svg);
+    background-repeat: no-repeat;
+    display: none;
+    @include respond-above(lg){
+      display: block;
+    }
+    /*BAMBOO DOTS*/
+    &:before{
+      position: absolute;
+      top: 38%;
+      left: 20%;
+      content: '';
+      width: 100%;
+      height: 20%;
+      background-image: url(../images/dots-gray.svg);
+      // background-color: blue;
+      z-index: 1;
+    }
+    /*BAMBOO FOOTER*/
+    &--footer{
+      top: unset;
+      bottom: -700px;
+      width: 1918.46px;
+      height: 1417.72px; 
+      left: -400px;
+      transform: rotate(10deg);
+      &:before{
+        display: none;
+      }
+    }
+  }
+  &__body{
+    position: relative;
+    overflow-x: hidden;
+    
+  }
+  &__header{
+    position: relative;
+    display: grid;
+    padding-top: 1rem;
+    @include respond-above(md){
+      grid-template-columns: repeat(2,1fr);
+      padding-top: 4rem;
+      
+    }
+  }
+  &__figure{
+    position: relative;
+    grid-row: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    @include respond-above(md){
+      grid-column: 2;
+    }
+    img{
+      display: block;      
+      transform: translateX(30%);
+      max-width: 85%;
+      @include respond-above(sm){
+      }
+      @include respond-above(md){
+        max-width: 100%;
+        transform: translateX(10%);
+      }
+      
+    }
+    &::before{
+      position: absolute;
+      content: '';
+      width: 356px;
+      height: 258px;
+      background-image: url(../images/dots-pattern.svg);
+      right: -200px;
+      bottom: -20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 1;
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }
+  }
+  &__article{
+    position: relative;
+    padding: 0 1.66rem 0 1.125rem;
+    @include respond-above(sm){
+      padding: 0 1.66rem 0 2.125rem;
+    }
+    @include respond-above(lg){
+      padding: 0 4.5625rem;
+    }
+    @include respond-above(xxl){
+      padding: 0 5.3125rem 0 11.5625rem;
+    }
+
+    &:before{
+      position: absolute;
+      content: '';
+      width: 356px;
+      height: 258px;
+      background-image: url(../images/dots-pattern.svg);
+      left: -100px;
+      top: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }
+    .button-group{
+      margin-top: 2.3125rem;
+    }
+    .heading-3{
+      @include respond-above(sm){
+        margin-bottom: .85rem;
+      }
+    }
+  }
+  .heading-1{
+    text-shadow: 0 3px 6px rgba($black,.16);
+    color: $primary;
+  }
+  &__buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    @include respond-above(sm){
+      margin-top: 3.375rem;
+
+    }
+    & > *:not(:last-child){
+      margin-right: 1.875rem;
+    }
+  }
+
+  &__sections{
+    position: relative;
+    /*CIRCLE CONDITIONS*/
+    &:before{
+      content: '';
+      position: absolute;
+      background: transparent linear-gradient(179deg, #63bb6200 0%, #63BB6226 100%) 0% 0% no-repeat padding-box;
+      opacity: 0.41;
+      border-radius: 50%;    
+      z-index: -1;
+      width: calc(60vw);
+      height:calc(60vw);
+      left: -30vw;
+      display: none;
+    @include respond-above(lg){
+      display: block;
+      top: -7vw;
+    }
+    @include respond-above(xl){
+    }
+    @include respond-above(xxl){
+    }
+    }
+    /*BAMBOO COMMON CONDTION*/
+    &:after{
+      position: absolute;
+      top: -250px;
+      right: -500px;
+      content: '';
+      width: 1017px;
+      height: 1281.22px;
+      background-image: url(../images/bamboo.svg);
+      background-repeat: no-repeat;
+      transform: rotate(-80deg);
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }
+  }
+  &__condition{
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 2.1875rem;
+    @include respond-above(sm){
+      grid-template-columns: repeat(2,1fr);
+    }
+    @include respond-above(md){
+      grid-template-columns: repeat(4,1fr);
+      margin-top: 5.75rem;
+      gap: 3.0625rem;
+    }
+    @include respond-above(xl){
+      gap: 6.0625rem;
+    }
+
+    
+  }
+
+  &__services{
+    position: relative;
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 2.1875rem;
+    margin-bottom: 5rem;
+    @include respond-above(sm){
+      grid-template-columns: repeat(2,1fr);
+      margin-bottom: 0;
+    }
+    @include respond-above(md){
+      margin-top: 5.75rem;
+      grid-template-columns: repeat(5,1fr);
+      row-gap: 2.4375rem;
+      column-gap: 1.4375rem;
+
+    }
+    @include respond-above(xl){
+      column-gap: 3.4375rem;
+    }
+    /*DOT PATTERN SERVICES */
+    &:before{
+      position: absolute;
+      content: '';
+      width: 150px;
+      height: 258px;
+      background-image: url(../images/dots-pattern.svg);
+      left: -150px;
+      top: -80px;
+      background-size: cover;
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }
+    & > *:first-child{
+      @include respond-above(md){
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+      }
+    }
+  }
+  
+}

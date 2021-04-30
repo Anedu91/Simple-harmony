@@ -1,0 +1,30 @@
+/*VENDORS*/
+@import "./vendors/swiper/swiper.scss";
+
+/*ABSTRACTS*/
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+/*BASE*/
+@import "./base/base";
+@import "./base/typography.scss";
+
+/*COMPONENTS*/
+@import "./components/button";
+@import "./components/card";
+@import "./components/form";
+@import "./components/section";
+@import "./components/social-nav";
+@import "./components/scroll-top";
+@import "./components/subscribe";
+@import "./components/swipper";
+
+/*LAYOUT*/
+@import "./layout/footer";
+@import "./layout/navbar";
+
+
+/*PAGES*/
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/home";

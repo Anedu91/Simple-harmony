@@ -1,0 +1,22 @@
+.scroll-top{
+  z-index: 100;
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  border-radius: 50%;
+  border:1px solid #707070;
+  bottom: 5rem;
+  right: 1.5rem;
+  background: $white;
+  @include respond-above(lg){
+    display: none;
+  }
+  svg{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

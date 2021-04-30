@@ -1,0 +1,26 @@
+*
+,*:before
+,*:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body{
+  box-sizing: border-box;
+  color: $text-color;
+  overflow-x: hidden;
+}
+
+a,a:visited{
+  text-decoration: none;
+  color: inherit;
+  transition: .5s all;
+}
+img{
+  max-width: 100%;
+}

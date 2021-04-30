@@ -1,0 +1,14 @@
+.section{
+  padding: 0 1.66rem 0 2.125rem;
+  margin-top: 6.9375rem;
+  @include respond-above(md){
+    padding: 0 1.66rem;
+    margin: 14.125rem 0 ;
+  }
+  @include respond-above(lg){
+    padding: 0 4.3125rem;
+  }
+  @include respond-above(xxl){
+    padding: 0 5.3125rem 0 11.5625rem;
+  }
+}

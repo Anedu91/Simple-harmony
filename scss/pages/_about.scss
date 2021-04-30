@@ -1,0 +1,215 @@
+.about{
+  
+
+  &:before{
+    content: '';
+    position: absolute;
+    background: transparent linear-gradient(179deg, #63bb6200 0%, #63BB6226 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.21;
+    border-radius: 50%;    
+    z-index: -10;
+    width: calc(60vw);
+    height:calc(60vw);
+    left: -35vw;
+    display: none;
+    @include respond-above(lg){
+      display: block;
+      top: 40vw;
+    }
+    @include respond-above(xl){
+      top: 40vw;
+    }
+    @include respond-above(xxl){
+      top: 40vw;
+    }
+  }
+  &__body{
+    position: relative;
+    overflow-x: hidden;
+  }
+  &__header{    
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 1.875rem 3.2125rem;   
+    display: flex;
+    justify-content: flex-end;
+    @include respond-above(md){
+      padding: 1.3125rem 1.66rem;
+      height: 50vh;
+    }
+    @include respond-above(lg){
+      height: calc(100vh - 115px);      
+      padding: 1.3125rem 4.5625rem;
+    }
+    @include respond-above(xxl){      
+      padding: 1.3125rem 9.375rem;
+    }
+
+    &:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url(../images/about-header.png);
+      background-repeat: no-repeat;
+      border-radius: 0 0 0 5rem; 
+      background-size: cover; 
+      @include respond-above(sm){
+        background-image: linear-gradient(to bottom, rgba($white,.35), rgba($white,.35)), url(../images/about-header-desktop.png);
+        border-radius: 0 0 0 15rem;
+      }
+      @include respond-above(lg){
+        background-image: linear-gradient(to bottom, rgba($white,.35), rgba($white,.15)), url(../images/about-header-desktop.png);
+        background-position: 0  50%;
+      }
+      @include respond-above(xxl){
+        background-image:  url(../images/about-header-desktop.png);
+      }
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 156px;
+      height: 358px;
+      background-image: url(../images/dots-pattern.svg);
+      right: -56px;
+      top: 20vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }    
+  }
+  &__article{
+    text-align: right;
+    @include respond-above(sm){
+      flex: 0 0 640px;
+      margin-top: 81px;
+
+    }
+    .heading-1{
+      @include respond-below(sm){
+        font-size: 2.375rem;
+        
+      }
+      color: $primary;
+      
+    }
+    .paragraph{      
+      @include respond-below(sm){
+        line-height: 1.75;
+        font-size: 12px;        
+      }
+      @include respond-above(xxl){
+        padding-left: 7rem;
+      }
+    }
+  }
+  &__scroll{
+    position: absolute;
+    bottom: 3rem;
+    color: $white;
+    display: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .7rem;
+    @include respond-above(lg){
+      display: flex;
+    }
+    &:hover{
+      svg{
+        transform: translateY(10px);
+      }
+    }
+    span{
+      margin-top: .5rem;
+      color: $white;
+    }
+    svg{
+      width: 3rem;
+      height: 3rem;
+      transition: all .5s;
+    }
+    
+
+  }
+  
+  &__section{
+    position: relative;
+    margin-top: 1rem;
+    @include respond-above(lg){
+      margin-top: 6.9375rem;
+    }
+    .heading-2{
+      display: none;
+      @include respond-above(md){
+        display: block;
+      }
+    }
+    
+    /*RIGHT BAMBOO*/
+    &:after{
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -460px;
+      content: '';
+      width: 1017px;
+      height: 1281.22px;
+      background-image: url(../images/bamboo.svg);
+      background-repeat: no-repeat;
+      transform: rotate(-80deg);
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }
+    /*RIGHT DOTS*/
+    &:before{
+      position: absolute;
+      content: '';
+      width: 254px;
+      height: 258px;
+      background-image: url(../images/dots-pattern.svg);
+      right: -50px;
+      top: -50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }
+  }
+  &__bamboo{
+      position: absolute;
+      bottom: 0;
+      left: -300px;
+      content: '';
+      width: 931.76px;
+      height: 1048.22px;
+      background-image: url(../images/bamboo.svg);
+      background-repeat: no-repeat;
+      display: none;
+      z-index: -1;
+      @include respond-above(lg){
+        display: block;
+      }
+      &:before{
+      position: absolute;
+      content: '';
+      width: 254px;
+      height: 258px;
+      background-image: url(../images/dots-pattern.svg);
+      left: 35%;
+      top: 30%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      }
+  }
+}

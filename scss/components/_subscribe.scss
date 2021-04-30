@@ -1,0 +1,59 @@
+.subscribe{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 4.375rem;
+  color: $white;
+  border-radius: 1rem;
+  width: 89%;
+  padding: 2.25rem 4.375rem;
+  background: rgba(#169e2d,.7);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  @include respond-above(lg){
+    width: 68.75rem;
+
+  }
+  &__article{
+    .paragraph{
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+  }
+  &__heading{
+    font-weight: 500;
+    font-size: 2.125rem;
+  }
+
+  &__form{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__input{
+    border-radius: 40px;
+    width: 100%;
+    padding: 1.625rem 1.875rem;
+    border: none;
+    font-family: inherit;
+    &:focus{
+      outline: none;
+    }
+  }
+  &__button{
+    position: absolute;
+    right: .875rem;
+    font-size: 0.9rem;
+    padding: 0.9rem 3.25rem;
+    border-radius: 2.125rem;
+    cursor: pointer;
+    background-color: #63BB62; 
+    color: $white;
+    border: none;
+    &:hover{
+      background-color: #318b30;
+    }
+  &:focus{
+    outline: none;
+  }
+  }
+}

@@ -1,0 +1,118 @@
+.navbar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // padding-top: 1.3125rem;
+  @include respond-above(md){
+    flex-direction: row;
+    padding: 1.3125rem 1.66rem;
+  }
+  @include respond-above(lg){
+    padding: 1.3125rem 4.5625rem;
+  }
+  @include respond-above(xxl){
+    padding: 1.3125rem 9.375rem;
+  }
+  &__brand{
+    width: 100%;
+    margin-bottom: .8125rem;   
+    @include respond-above(sm){
+      width: auto;
+    }
+  }
+  &__logo{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+  &__inner-nav{
+    width: 100%;
+    padding: 1rem 2.125rem;
+    background: $gray;
+    border-radius: 0 0 1.5rem 0;
+    box-shadow: inset 0 5px 10px rgba($black,.16);
+    @include respond-below(xxxs){
+      padding: 1rem;
+    }
+    @include respond-above(md){
+      display: none;
+    }
+  }
+  &__nav{
+    margin-left: auto;
+    display: none;
+    @include respond-above(md){
+      display: block;
+    }
+  }
+  &__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{    
+      &:not(:last-child){
+        @include respond-above(lg){
+          margin-right: 2.25rem;
+        }
+        @include respond-above(xl){
+          margin-right: 3.25rem;
+        }
+      }
+    
+  }
+  &__link{
+    font-size: 0.625rem;
+    @include respond-above(sm){
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    &--pill{
+      padding: .625rem 1.25rem;
+      border-radius: 2.125rem;
+      &:hover{
+        color: $primary;
+      }     
+      &.active{
+        color: $white;
+        background: #333;
+      }
+      &.border{
+        color: $primary;
+        border: 3px solid $primary;
+        &:hover{
+          color: $black;
+          border-color: $black;
+        }
+      }
+    }
+  }
+  &__mobile{
+    background: $primary;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1.1375rem 2.1875rem;
+    border-radius: 3rem 3rem 0 0;
+    z-index: 100;
+    @include respond-above(md){
+      display: none;
+    }
+  }
+  &__mobile &__link{
+    color: #FF7E50;
+  }
+  &__mobile &__link.active{
+    color: $white;
+  }
+  &__mobile &__link:hover{
+    color: $white;
+  }
+  &__icon{
+    width: 1.5625rem;
+    height: 1.25rem;
+    fill: currentColor;
+  }
+}

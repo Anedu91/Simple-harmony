@@ -1,0 +1,107 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  &--border{
+    position: relative;
+    padding: 1.275rem 1rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 15px rgba($black,.16);
+    z-index: 1;
+    @include respond-above(sm){
+      padding: 2.875rem 2rem;
+      border-radius: 3.25rem;
+    }
+  }
+
+  &__figure{
+    border: 1px solid $primary;
+    border-radius: 50%;
+    padding: 0.625rem;
+    position: relative;
+    
+    &.filter{
+      background: transparent linear-gradient(180deg, #f25a24 0%, #C14013 100%) 0% 0% no-repeat content-box;
+      img{
+        mix-blend-mode: lighten;
+        -webkit-backdrop-filter: opacity(40%) blur(31px);
+        backdrop-filter: opacity(40%) blur(31px);      
+      }
+
+    }
+    
+    img{
+      
+      position: relative;
+      border-radius: 50%;
+      display: block;
+      box-shadow: 0 3px 6px rgba($black,.16);
+      max-width: 112px;
+      object-fit: cover;
+      z-index: 1;
+      @include respond-above(sm){
+        max-width: 150px;
+      }
+      @include respond-above(md){
+        max-width: 100%;
+      }
+    }
+  }
+  &__article{
+    margin-top: 1.3125rem;
+    text-align: center;
+    @include respond-above(sm){
+      text-align: left;
+    }
+
+    &--big{
+      @include respond-above(md){
+        margin-top: 3.5rem;
+      }
+    }
+  }
+  &__paragraph{
+    font-size: .95rem;
+    color: $black;
+    line-height: 1.5;
+    @include respond-above(xl){
+      font-size: 1rem;
+      padding-right: 1.5rem;
+      line-height: 2;
+
+    }
+  }
+  &--border &__paragraph{
+    font-size: .75rem;
+    @include respond-above(sm){
+      font-size: .95rem;
+    }
+    @include respond-above(xl){
+      font-size: 1rem;
+    }
+  }  
+  &__heading{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $primary;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    @include respond-above(sm){
+      margin-bottom: .6rem;
+    }
+    @include respond-above(lg){
+      font-size: 1.1rem;
+    }
+    @include respond-above(xl){
+      font-size: 1.25rem;
+    }
+  }
+  &--border &__heading{
+    margin-bottom: .85rem;
+    text-align: center;
+    @include respond-above(sm){
+      margin-bottom: .6rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.button{
+  font-size: 0.8125rem;
+  padding: 0.8125rem 2rem;
+  border-radius: 2.125rem;
+  line-height:1.5;
+  display: flex;
+  align-items: center;
+  @include respond-below(xxxs){
+    padding: 0.8125rem 1rem;
+  }
+  @include respond-above(sm){
+    font-size: 1.1rem;
+  }
+  &.primary{
+    color: $white;
+    background: $primary;
+    &:hover{
+      background: rgba($primary,.85);
+    }
+  }
+  &.outline{
+    color: $primary;
+    border: 3px solid $primary;
+    &:hover{
+      background: $primary;
+      color: $white;
+    }
+  }
+}
+.button-group{
+  display: flex;
+}

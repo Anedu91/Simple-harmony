@@ -1,0 +1,23 @@
+.swiper{
+  &-container{
+    width: 100%;
+    padding: 1rem .25rem;
+    margin-bottom: 5rem;
+  }
+  &-slide{
+    background: $white;
+    width: 70%;
+    @include respond-below(xxxs){
+      width: 100%;
+    }
+    @include respond-above(sm){
+      width: 100%;
+    }
+    @include respond-above(lg){
+      width: 30%;
+    }
+    @include respond-above(xxl){
+    width: 100%;  
+    }
+  }
+}

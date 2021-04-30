@@ -1,0 +1,116 @@
+.contact{
+  &__header{
+    position: relative;
+    padding: 1rem 1.875rem 3.2125rem;      
+    display: grid;
+    @include respond-above(sm){
+      padding: 4.3125rem 1.66rem; 
+      gap: 5vw;
+    }
+    @include respond-above(lg){
+      grid-template-columns: repeat(2,1fr);
+      padding: 3.3125rem 4.5625rem 1.3125rem;
+      height: calc(100vh - 118px);       
+    }
+    @include respond-above(xxl){
+      padding: 8rem 8.375rem 3.2125rem;
+      gap: 15vw;
+    }
+
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url(../images/contact-header.png);
+      background-repeat: no-repeat;
+      border-radius: 0 0 3.5rem 3.5rem;       
+      background-size: cover; 
+      @include respond-above(sm){
+        background-image: url(../images/contact-header-desktop.png);
+        background-position: 0% 80%;
+      }
+      @include respond-above(lg){
+        border-radius: 0 0 10rem 10rem; 
+      }
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 206px;
+      height: 258px;
+      background-image: url(../images/dots-pattern.svg);
+      right: -146px;
+      top: 20vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }  
+  }
+  &__article{
+    // position: relative;
+    color: $white;
+    @include respond-above(sm){
+      position: relative;
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      width: 206px;
+      height: 258px;
+      background-image: url(../images/dots-pattern.svg);
+      left: -106px;
+      top: -50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: none;
+      @include respond-above(lg){
+        display: block;
+      }
+    }
+    .heading-1{
+      line-height: 1;      
+      margin-bottom: 1.5rem;
+      @include respond-below(sm){
+        font-size: 2.375rem;
+        text-align: center;
+        margin-bottom: .75rem;
+
+      } 
+      @include respond-above(lg){
+        font-size: 5rem;
+      }     
+      @include respond-above(xxl){
+        font-size: 6.125rem;
+      }
+    }
+    .paragraph{
+      padding-right: 4rem;
+      margin-bottom: 2.9375rem;
+    }
+    .heading-3, .paragraph{
+      display: none;
+      @include respond-above(md){
+        display: flex;
+      }
+    }
+    .social-nav{
+      position: absolute;
+      bottom: 3.2125rem;
+      @include respond-above(md){
+        position: relative;
+        bottom: unset;
+      }
+    }
+  }
+  &__calendar{
+    width: 100%;
+    height: 50vh;
+  }
+}
