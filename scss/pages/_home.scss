@@ -25,22 +25,7 @@
     }
 
   }
-  /*FOOTER BAMBOO*/
-  // &:after{
-  //   position: absolute;
-  //   bottom: -700px;
-  //   left: -400px;
-  //   content: '';
-  //   width: 1918.46px;
-  //   height: 2417.72px;
-  //   background-image: url(../images/bamboo.svg);
-  //   background-repeat: no-repeat;
-  //   display: none;
-  //   transform: rotate(10deg);
-  //   @include respond-above(lg){
-  //     display: block;
-  //   }
-  // }
+  
   /*HEADER BAMBOO*/
   &__bamboo{
     position: absolute;
@@ -288,5 +273,19 @@
       }
     }
   }
-  
+  /* FOOTER BAMBOO */
+  &__footer-bamboo{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 1500px;
+    background-image: url(../images/bamboo.svg);
+    background-size: 110%;
+    background-position: 300% 40%;
+    background-repeat: no-repeat;
+    display: none;
+    @include respond-above(lg){
+      display: block;
+    }
+  }
 }

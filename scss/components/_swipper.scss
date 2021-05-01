@@ -1,8 +1,9 @@
 .swiper{
   &-container{
     width: 100%;
-    padding: 1rem .25rem;
+    padding: 1rem .25rem 3rem;
     margin-bottom: 5rem;
+    display: flex;
   }
   &-slide{
     background: $white;
@@ -13,11 +14,38 @@
     @include respond-above(sm){
       width: 100%;
     }
-    @include respond-above(lg){
-      width: 30%;
-    }
     @include respond-above(xxl){
     width: 100%;  
+    }
+  }
+  &-pagination{
+    margin-top: 5rem;
+    &-bullet-active{
+      background: $primary;
+    }
+  }
+  &-button-next{
+    top: 95%;
+    color: $primary;
+    width: 2rem;
+    height: 2rem;
+    &:focus{
+      outline: none;
+    }
+    &:after{
+      content:'\2192';
+    }
+  }
+  &-button-prev{
+    top: 95%;
+    color: $primary;
+    width: 2rem;
+    height: 2rem;
+    &:focus{
+      outline: none;
+    }
+    &:after{
+      content:'\2190';
     }
   }
 }

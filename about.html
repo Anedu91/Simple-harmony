@@ -18,7 +18,7 @@
     <div class="navbar__nav">
       <ul class="navbar__list">
         <li class="navbar__item">
-          <a href="home.html" class="navbar__link navbar__link--pill ">Home</a>
+          <a href="index.html" class="navbar__link navbar__link--pill ">Home</a>
         </li>
         <li class="navbar__item">
           <a href="#" class="navbar__link navbar__link--pill">Product</a>
@@ -158,7 +158,10 @@
               </article>
             </div>
           </div>
-        </div>       
+        </div>  
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>    
       </div>
     </section>
   </main>  
@@ -231,20 +234,29 @@
     </div>
   </footer>
 
-  <!-- <script src="js/vendors/swiper-bundle.js"></script> -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/vendors/swiper-bundle.js"></script> 
+  <script src="js/main.js"></script> 
   <script>
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
       spaceBetween: 30,
       loop:true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+          clickable: true,
+        },
       breakpoints:{
         640:{
           slidesPerView: 2,
           spaceBetween: 60,
         },
         1200:{
-          slidesPerView: 'auto',
+          slidesPerView: '3',
           spaceBetween: 40,
         },
         1600:{
